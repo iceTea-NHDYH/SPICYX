@@ -19,6 +19,7 @@ print(vios.seating_capacity)
 print(vios.maximum_velocity)
 
 #test test cheebs#
+#seki#
 
 blueSG = ElectricCar ('4', 5, 150)
 blueSG.drive()
