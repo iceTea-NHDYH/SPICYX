@@ -17,3 +17,7 @@ if __name__ == '__main__':
 #Fathuriyah
 #banu
 #HELLOOOO
+import scrapy
+class NewSpider(scrapy.Spider):
+    name = "new.spider"
+    start_urls = ['http://brickset.com/sets/year-2019']
