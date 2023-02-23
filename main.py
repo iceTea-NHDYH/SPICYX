@@ -1,23 +1,23 @@
 import requests
 
 url = 'http://172.18.58.80/spicyx/'
-r = requests.get(url)
+webpage = requests.get(url)
 
-print(r.text)
+print(webpage.text)
 
-print("Status code:")
-print("\t *", r.status_code)
+print("Status code: ")
+print("\t *", webpage.status_code)
 
 h = requests.head(url)
 print("Header:")
-print("**********")
+print("****************")
 
 for x in h.headers:
-    print("\t ", x, ":", h.headers[x])
-print("**********")
+    print("\t", x, ":", h.headers[x])
+print("*****************")
 
-headers = {'User-Agent':'Mobile'}
+headers = {'User-Agent': 'Pundeh Phone'}
 
-url2 = 'http://httpbin.org/headers.php'
-rh = requests.get(url2, headers=headers)
-print(rh.text)
+url2 = 'http://httpbin.org/headers'
+request_header = requests.get(url2, headers=headers)
+print(request_header.text)
