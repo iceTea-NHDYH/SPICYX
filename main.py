@@ -1,3 +1,4 @@
+
 import requests
 
 url = 'http://172.18.58.80/spicyx/'
@@ -5,19 +6,19 @@ webpage = requests.get(url)
 
 print(webpage.text)
 
-print("SPICYX ")
+print("Status code:")
 print("\t *", webpage.status_code)
 
 h = requests.head(url)
 print("Header:")
-print("****************")
+print("**********")
 
 for x in h.headers:
-    print("\t", x, ":", h.headers[x])
-print("*****************")
+    print("\t ", x, ":", h.headers[x])
+print("**********")
 
 headers = {'User-Agent': 'Mobile'}
 
-url2 = 'http://httpbin.org/headers.php'
+url2 = 'http://httpbin.org/headers'
 request_header = requests.get(url2, headers=headers)
-print(request_header.text)
+print(request_header.text )
